@@ -1,27 +1,25 @@
 import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import Simple from './components/Simple';
 import EvenOdd from './components/EvenOdd';
 import {Reverse, MegaSena} from './components/Multi';
 
+const Drawer = createDrawerNavigator();
+
 export default class App extends Component {
 	render() {
 		return (
-			<View style={styles.container}>
-				<Simple text='Hello World!'/>
-				<EvenOdd number={223}/>
-				<Reverse text='React Native'/>
-				<MegaSena/>
-			</View>
+			<NavigationContainer>
+      			<Drawer.Navigator initialRouteName="Simple">
+					<Drawer.Screen name="MegaSena" component={MegaSena} options={{title: 'Mega Sena'}} />
+					<Drawer.Screen name="Reverse" component={Reverse} options={{title: 'Inverter Texto'}} />
+					<Drawer.Screen name="EvenOdd" component={EvenOdd} options={{title: 'Par ou Ímpar'}} />
+        			<Drawer.Screen name="Simple" component={Simple} options={{title: 'Texto Simples'}} />
+      			</Drawer.Navigator>
+			</NavigationContainer>
 		)
 	}
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center'
-	} 
-})

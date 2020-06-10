@@ -1,5 +1,9 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {View, Text} from 'react-native';
 import Template from '../style/Template'
 
-export default props => <Text style={Template.ex}>{props.text}</Text>;
+export default props => (
+    <View>
+        <Text style={Template.ex}>Hello World</Text>
+    </View>
+);

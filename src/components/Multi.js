@@ -3,7 +3,7 @@ import {Text} from 'react-native';
 import Template from '../style/Template'
 
 export const Reverse = props => {
-    const inv = props.text.split('').reverse().join('');
+    const inv = 'React Native'.split('').reverse().join('');
     return <Text style={Template.ex}>{inv}</Text>
 }
 
