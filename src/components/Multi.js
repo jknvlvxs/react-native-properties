@@ -1,15 +1,15 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {View, Text} from 'react-native';
 import Template from '../style/Template'
 
-export const Reverse = props => {
-    const inv = 'React Native'.split('').reverse().join('');
+export const Reverse = ({ navigation, route }) => {
+    const inv = route.params.text.split('').reverse().join('');
     return <Text style={Template.ex}>{inv}</Text>
 }
 
-export const MegaSena = props => {
+export const MegaSena = ({ navigation, route }) => {
     const [min, max] = [1, 60];
-    const number = Array(props.number || 6).fill(0)
+    const number = Array(route.params.number || 6).fill(0)
 
     for(let i = 0; i < number.length; i++){
         let novo = 0;
@@ -22,7 +22,11 @@ export const MegaSena = props => {
     }
 
     number.sort((a, b) => a-b);
-    return <Text style={Template.ex}>{number.join(', ')}</Text>
+    return (
+        <View>
+            <Text style={Template.ex}>{number.join(', ')}</Text>
+        </View>
+    )
 }
 
 export default Reverse;
