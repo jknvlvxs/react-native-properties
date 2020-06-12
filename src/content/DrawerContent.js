@@ -39,6 +39,16 @@ export function DrawerContent(props) {
                         </View> */}
 					</View>
 					<Drawer.Section style={styles.drawerSection}>
+					<DrawerItem 
+							icon={({color, size}) =>
+								<Icon
+									name="account-check-outline"
+									color={color}
+									size={size}
+								/>}
+							label="Plataformas" 
+							onPress={() => {props.navigation.navigate('Platforms')}} 
+						/>
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon

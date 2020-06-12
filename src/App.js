@@ -9,6 +9,7 @@ import Simple from './components/Simple';
 import EvenOdd from './components/EvenOdd';
 import {Reverse, MegaSena} from './components/Multi';
 import Counter from './components/Counter';
+import Platforms from './components/Platforms';
 
 const Drawer = createDrawerNavigator();
 
@@ -17,6 +18,7 @@ export default class App extends Component {
 		return (
 			<NavigationContainer>
       			<Drawer.Navigator drawerContent={props => <DrawerContent {...props}/>}>
+				  	<Drawer.Screen name="Platforms" component={Platforms} />
 					<Drawer.Screen name="Counter" component={Counter} />
 					<Drawer.Screen name="MegaSena" component={MegaSena} initialParams={{ number: 5 }} />
 					<Drawer.Screen name="Reverse" component={Reverse} initialParams={{ text: 'React Native' }} />
