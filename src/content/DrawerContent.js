@@ -39,7 +39,17 @@ export function DrawerContent(props) {
                         </View> */}
 					</View>
 					<Drawer.Section style={styles.drawerSection}>
-					<DrawerItem 
+						<DrawerItem 
+							icon={({color, size}) =>
+								<Icon
+									name="account-check-outline"
+									color={color}
+									size={size}
+								/>}
+							label="Validar Propriedades" 
+							onPress={() => {props.navigation.navigate('ValidateProperties')}} 
+						/>
+						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
 									name="account-check-outline"
