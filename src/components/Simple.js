@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import Template from '../style/Template'
 
-export default ({ navigation, route }) => 
+export default props => 
     <View>
-        <Text style={Template.ex}>{route.params.text}</Text>
+        <Text style={Template.ex}>{props.text}</Text>
     </View>

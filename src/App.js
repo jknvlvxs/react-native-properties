@@ -19,13 +19,23 @@ export default class App extends Component {
 		return (
 			<NavigationContainer>
       			<Drawer.Navigator drawerContent={props => <DrawerContent {...props}/>}>
-				  	<Drawer.Screen name="ValidateProperties" component={() => <ValidateProperties label={'Ano: '} year={15} />} />
+				  	<Drawer.Screen name="ValidateProperties">
+					  	{props => <ValidateProperties {...props} year={12} />}
+					</Drawer.Screen>
 				  	<Drawer.Screen name="Platforms" component={Platforms} />
 					<Drawer.Screen name="Counter" component={Counter} />
-					<Drawer.Screen name="MegaSena" component={MegaSena} initialParams={{ number: 5 }} />
-					<Drawer.Screen name="Reverse" component={Reverse} initialParams={{ text: 'React Native' }} />
-					<Drawer.Screen name="EvenOdd" component={EvenOdd} initialParams={{ number: 785 }} />
-        			<Drawer.Screen name="Simple" component={Simple} initialParams={{ text: 'Teste' }}/>
+					<Drawer.Screen name="MegaSena">
+						{props => <MegaSena {...props} number={7} />}
+					</Drawer.Screen>
+					<Drawer.Screen name="Reverse">
+						{props => <Reverse {...props} text={'React Native'} />}
+					</Drawer.Screen>
+					<Drawer.Screen name="EvenOdd">
+						{props => <EvenOdd {...props} number={34} />}
+					</Drawer.Screen>
+        			<Drawer.Screen name="Simple">
+						{props => <Simple {...props} text={'Texto Simples'} />}
+					</Drawer.Screen>
       			</Drawer.Navigator>
 			</NavigationContainer>
 		)
