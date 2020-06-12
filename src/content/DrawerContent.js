@@ -42,6 +42,26 @@ export function DrawerContent(props) {
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
+									name="account-multiple"
+									color={color}
+									size={size}
+								/>}
+							label="Estudantes (Native)" 
+							onPress={() => {props.navigation.navigate('StudentsList')}} 
+						/>
+						<DrawerItem 
+							icon={({color, size}) =>
+								<Icon
+									name="account-multiple"
+									color={color}
+									size={size}
+								/>}
+							label="Estudantes (Paper)" 
+							onPress={() => {props.navigation.navigate('StudentsListPaper')}} 
+						/>
+						<DrawerItem 
+							icon={({color, size}) =>
+								<Icon
 									name="subdirectory-arrow-left"
 									color={color}
 									size={size}
