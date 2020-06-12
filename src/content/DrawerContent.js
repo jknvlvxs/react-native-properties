@@ -38,11 +38,11 @@ export function DrawerContent(props) {
                             </View>
                         </View> */}
 					</View>
-					<Drawer.Section style={styles.drawerSection}>
+					<Drawer.Section style={styles.drawerSection} title="Projetos das Aulas">
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
-									name="account-check-outline"
+									name="subdirectory-arrow-left"
 									color={color}
 									size={size}
 								/>}
@@ -52,7 +52,7 @@ export function DrawerContent(props) {
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
-									name="account-check-outline"
+									name="subdirectory-arrow-right"
 									color={color}
 									size={size}
 								/>}
@@ -62,7 +62,7 @@ export function DrawerContent(props) {
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
-									name="account-check-outline"
+									name="rotate-orbit"
 									color={color}
 									size={size}
 								/>}
@@ -82,7 +82,7 @@ export function DrawerContent(props) {
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
-									name="account-check-outline"
+									name="cellphone"
 									color={color}
 									size={size}
 								/>}
@@ -92,7 +92,7 @@ export function DrawerContent(props) {
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
-									name="account-check-outline"
+									name="format-list-numbered"
 									color={color}
 									size={size}
 								/>}
@@ -102,7 +102,7 @@ export function DrawerContent(props) {
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
-									name="home-outline"
+									name="numeric-6-circle"
 									color={color}
 									size={size}
 								/>}
@@ -112,7 +112,7 @@ export function DrawerContent(props) {
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
-									name="bookmark-outline"
+									name="alphabetical"
 									color={color}
 									size={size}
 								/>}
@@ -122,7 +122,7 @@ export function DrawerContent(props) {
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
-									name="account-outline"
+									name="numeric"
 									color={color}
 									size={size}
 								/>}
@@ -132,7 +132,7 @@ export function DrawerContent(props) {
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
-									name="settings-outline"
+									name="alphabetical"
 									color={color}
 									size={size}
 								/>}
@@ -140,7 +140,7 @@ export function DrawerContent(props) {
 							onPress={() => {props.navigation.navigate('Simple')}} 
 						/>
 					</Drawer.Section>
-					<Drawer.Section title="Preferences">
+					{/* <Drawer.Section title="Preferences">
 						<TouchableRipple onPress={() => {toggleTheme()}}>
 							<View style={styles.preference}>
 								<Text>Dark Theme</Text>
@@ -149,7 +149,7 @@ export function DrawerContent(props) {
 								</View>
 							</View>
 						</TouchableRipple>
-					</Drawer.Section>
+					</Drawer.Section> */}
 				</View>
 			</DrawerContentScrollView>
 			<Drawer.Section style={styles.bottomDrawerSection}>
