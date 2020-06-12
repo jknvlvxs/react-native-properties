@@ -16,6 +16,7 @@ import {Grandfather} from './components/DirectCommunication';
 import {SyncText} from './components/Callback';
 import StudentsList from './components/StudentsList';
 import StudentsListPaper from './components/StudentsListPaper';
+import FlexBox from './components/Flexbox';
 
 const Drawer = createDrawerNavigator();
 
@@ -24,6 +25,8 @@ export default class App extends Component {
 		return (
 			<NavigationContainer>
       			<Drawer.Navigator drawerContent={props => <DrawerContent {...props}/>}>
+				  	<Drawer.Screen name="FlexBox" component={FlexBox} />
+
 				  	<Drawer.Screen name="StudentsList" component={StudentsList} />
 					  
 				  	<Drawer.Screen name="StudentsListPaper" component={StudentsListPaper} />

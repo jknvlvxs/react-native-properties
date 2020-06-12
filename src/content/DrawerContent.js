@@ -42,6 +42,16 @@ export function DrawerContent(props) {
 						<DrawerItem 
 							icon={({color, size}) =>
 								<Icon
+									name="drawing-box"
+									color={color}
+									size={size}
+								/>}
+							label="FlexBox (Círculos)" 
+							onPress={() => {props.navigation.navigate('FlexBox')}} 
+						/>
+						<DrawerItem 
+							icon={({color, size}) =>
+								<Icon
 									name="account-multiple"
 									color={color}
 									size={size}
