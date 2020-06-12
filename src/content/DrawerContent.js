@@ -46,6 +46,16 @@ export function DrawerContent(props) {
 									color={color}
 									size={size}
 								/>}
+							label="Comunicação Direta" 
+							onPress={() => {props.navigation.navigate('DirectCommunication')}} 
+						/>
+						<DrawerItem 
+							icon={({color, size}) =>
+								<Icon
+									name="account-check-outline"
+									color={color}
+									size={size}
+								/>}
 							label="Eventos" 
 							onPress={() => {props.navigation.navigate('Events')}} 
 						/>

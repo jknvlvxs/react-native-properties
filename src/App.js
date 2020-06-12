@@ -12,6 +12,7 @@ import Counter from './components/Counter';
 import Platforms from './components/Platforms';
 import ValidateProperties from './components/ValidateProperties';
 import Events from './components/Events';
+import {Grandfather} from './components/DirectCommunication';
 
 const Drawer = createDrawerNavigator();
 
@@ -20,6 +21,10 @@ export default class App extends Component {
 		return (
 			<NavigationContainer>
       			<Drawer.Navigator drawerContent={props => <DrawerContent {...props}/>}>
+				  	<Drawer.Screen name="DirectCommunication">
+						{props => <Grandfather {...props} name='Josias' lastname='Silva'/>}
+					</Drawer.Screen>
+
 					<Drawer.Screen name="Events">
 						{props => <Events {...props}/>}
 					</Drawer.Screen>
