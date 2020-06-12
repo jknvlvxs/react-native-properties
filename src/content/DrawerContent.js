@@ -46,6 +46,16 @@ export function DrawerContent(props) {
 									color={color}
 									size={size}
 								/>}
+							label="Comunicação Indireta" 
+							onPress={() => {props.navigation.navigate('Callback')}} 
+						/>
+						<DrawerItem 
+							icon={({color, size}) =>
+								<Icon
+									name="account-check-outline"
+									color={color}
+									size={size}
+								/>}
 							label="Comunicação Direta" 
 							onPress={() => {props.navigation.navigate('DirectCommunication')}} 
 						/>
@@ -126,7 +136,7 @@ export function DrawerContent(props) {
 									color={color}
 									size={size}
 								/>}
-							label="Simple" 
+							label="Texto Simples" 
 							onPress={() => {props.navigation.navigate('Simple')}} 
 						/>
 					</Drawer.Section>

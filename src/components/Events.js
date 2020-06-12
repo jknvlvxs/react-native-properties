@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {View, Text, TextInput} from 'react-native';
+import {View} from 'react-native';
 import Template from '../style/Template';
+import {Text, TextInput} from 'react-native-paper'
 
 export default class Events extends Component {
     state = {
