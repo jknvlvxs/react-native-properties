@@ -46,6 +46,16 @@ export function DrawerContent(props) {
 									color={color}
 									size={size}
 								/>}
+							label="Eventos" 
+							onPress={() => {props.navigation.navigate('Events')}} 
+						/>
+						<DrawerItem 
+							icon={({color, size}) =>
+								<Icon
+									name="account-check-outline"
+									color={color}
+									size={size}
+								/>}
 							label="Validar Propriedades" 
 							onPress={() => {props.navigation.navigate('ValidateProperties')}} 
 						/>
